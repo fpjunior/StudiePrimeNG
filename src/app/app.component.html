@@ -1,0 +1,141 @@
+<div class="container">
+
+    <form action="" id="formulario" method="post" class="well form-horizontal" action=" ">
+
+
+<!-- Form Name -->
+<legend>Gerenciamento de Percurso</legend>
+
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Percurso Cadastrado</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option  >Selecione o Percurso</option>
+      
+      <option  name="op" type="option"    onClick="calc();"  id="op1" value="1">S. Lourenco / L. Itaenga = 45km</option>
+      <option name="op" type="option"  onClick="calc();"  id="op2" value="2" >Lourenco / Limoeiro = 60km</option>
+      <option name="op" type="radio"  onClick="calc();" id="op3" value="3" >S. Lourenco / Alianca = 66km</option>
+      <option >Sao Lourenco / Aliança</option>
+      <option>L. Itaenga / Aliança</option>
+      
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Preço do Litro </label>  
+ 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+        <div class="ui-g-12 ui-md-4">
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon">R$</span>
+                <input type="text" pInputText placeholder="Preço">   
+                <span class="ui-inputgroup-addon">.00</span>      
+            </div>
+        </div>
+  <!-- <input name="v2" placeholder="autonomia" class="form-control" size="3px"  value="4.39" type="text"> -->
+    </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  
+  <label class="col-md-4 control-label">Autonomia</label>  
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+        <input value="14" type="text" pInputText />
+        
+  <!-- <input type="text" size="3px" name="v3"  placeholder="Preço do Litro" value="14" class="form-control" type="text"> -->
+    </div>
+  </div>
+</div>
+
+  <!-- Text input-->
+<div class="form-group">
+    <h3 class="first">Valor gasto no Percurso</h3>
+  <!-- <label class="col-md-4 control-label">Valor gasto no Percurso</label>   -->
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+        <div class="ui-g-12 ui-md-4">
+            <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon">R$</span>
+                <input type="text" pInputText placeholder="Valor">   
+                <span class="ui-inputgroup-addon">.00</span>      
+            </div>
+        </div>
+  <!-- <input type="text" size="6px" name="resp" value="R$"  placeholder="Preço do Litro" value="14" class="form-control" type="text"> -->
+    </div>
+  </div>
+</div>
+  
+    
+  
+       <p-panel header="Escolha uma opção abaixo para calcular um percurso">
+
+      <label class="col-md-4 control-label">Selecione um Percurso Cadastrado</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+<!--                                
+                                    <input name="op" type="radio"    onClick="calc();"  id="op1" value="1" />  -->
+                                    <p-radioButton name="op" value="1" ></p-radioButton> S. Lourenco / L. Itaenga = 45km
+                                </label>
+                            </div>                   
+                            <div class="radio">
+                                <label>
+                                    <!-- <input name="op" type="radio"  onClick="calc();"  id="op2" value="2" /> S. Lourenco / Limoeiro = 60km -->
+                                    <p-radioButton name="op" value="2" ></p-radioButton> S. Lourenco / Limoeiro = 60km
+                                  </label>
+                            </div>
+                          <div class="radio">
+                                <label>
+                                    <!-- <input name="op" type="radio"  onClick="calc();" id="op3" value="3" />   -->
+                                    <p-radioButton name="op" value="3" ></p-radioButton> S. Lourenco / Alianca = 66km
+                                  </label>
+                            </div>
+                          <div class="radio">
+                                <label>
+                                    <!-- <input name="op" type="radio"  onClick="calc();" id="op4" value="4" /> S. Lourenco / Aliança = 77km -->
+                                    <p-radioButton name="op" value="3" ></p-radioButton>  S. Lourenco / Aliança = 77km
+                                  </label>  
+                            </div>
+                                <label>
+                                    <!-- <input name="op" type="radio"  id="op4" value="" /> Marque aqui para adicionar no campo abaixo o valor do km: -->
+                                  </label>
+                                    <div class="ui-inputgroup">
+                                        <p-radioButton name="op" value="3" ></p-radioButton> 
+                                        <div>
+                                          <label for=""></label>
+                                        <input type="text" pInputText placeholder="km"> 
+                                        
+                                      </div> 
+                                    </div>
+                          <!-- <input type="text" size="4px" name="v1"  placeholder="Informe o KM" value="" class="form-control" type="text"> -->
+                        </div>
+                        <div>
+                          <span>   
+      <button pButton type="button"  onclick="calc();" label="CALCULAR VALOR" class="ui-button-success"></button>
+    </span>
+    <!-- <button type="button" class="btn btn-warning" onclick="calc();">CALCULAR GASTO DO PERCURSO <span class="glyphicon glyphicon-send"></span></button> -->
+  </div>
+
+</p-panel>
+
+</form>
+</div>
+   
+  
